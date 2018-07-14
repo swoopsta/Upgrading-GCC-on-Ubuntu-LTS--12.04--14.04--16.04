@@ -2,7 +2,10 @@
 <img src="https://www.adamayala.com/images/logo-100x100.png">
 </p>
 
-Ubuntu Server installs are faily minimal based on what you choose during install. On a VPS you don't have those options so most of the time it's not installed at all. If you're going to do any compiling you'll install it along with some other tools. The default as of this writing in 16.04 LTS is g++-5. I recently moved my webserver to a Google Cloud compute instance and wanted to compile a custom version of the Nginx webserver with certain modules built into the server itself. I needed to build 2 different versions (ARM7 & 64bit) for my server and my home lab. I also noticed that the latest version had siginificant performance optimazations for the Intel Skylake hardware that Google Compute instances use.
+Ubuntu Server installs are faily minimal based on what you choose during install. On a VPS you don't have those options so most of the time it's not installed at all. If you're going to do any compiling you'll install it along with some other tools. The default as of this writing in 16.04 LTS is g++-5. I recently moved my webserver to a Google Cloud compute instance and wanted to compile a custom version of the Nginx webserver with certain modules built into the server itself. I needed to build 2 different versions (ARM7 & 64bit) for my server and my home lab. I also noticed that the latest version had siginificant performance optimazations for the Intel Skylake hardware that Google Compute instances use. If you decide to use the shell script make sure you make it executable:
+```
+chomd +x gcc-install.sh
+```
 
 First you'll want to get the repos for the source.
 ```
