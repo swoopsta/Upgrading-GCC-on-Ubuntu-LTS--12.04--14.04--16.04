@@ -5,7 +5,7 @@
 # Author:      Adam Ayala
 # License:     GPL v3.0
 # OS:          Ubuntu 16.04
-# Release:     1.0.0
+# Release:     1.0.1
 # Website:     https://www.adamayala.com
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
@@ -18,8 +18,7 @@ clear
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 sudo apt update
 echo -ne "       Downloading and Installing            [..]\r"
-sudo apt install gcc-7 g++-7 gcc-8 g++-8
+sudo apt install gcc-8 g++-8 -y
 sudo update-alternatives --remove-all gcc
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 echo "Done"
